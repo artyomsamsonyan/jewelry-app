@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover {
+  opacity: 0.8;
+  transition: ease-in-out all;
+}
+
+a {
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Jost-Regular;
+  src: url(./enviaroments/fonts/Jost-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Jost-Medium;
+  src: url(./enviaroments/fonts/Jost-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Jost-SemiBold;
+  src: url(./enviaroments/fonts/Jost-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Jost-Bold;
+  src: url(./enviaroments/fonts/Jost-Bold.ttf);
+  font-weight: 700;
+}
+
+.bg-gradient-black {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8239670868347339) 1%,
+    rgba(41, 41, 41, 0.6727065826330532) 58%,
+    rgba(255, 255, 255, 0) 95%
+  );
+}
+
+.animation {
+  opacity: 0 !important;
+  transform: scale(0.9);
+}
+
+.all_models,
+.home_button,
+.header,
+.home {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 800ms, transform 800ms;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.slick-next {
+  right: -10px !important;
+  height: 100% !important;
+  width: 50px !important;
+}
+
+.slick-prev {
+  left: 15px !important;
+  height: 100% !important;
+  width: 50px !important;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile_menu_bar {
+    filter: blur(10px);
+  }
+}
