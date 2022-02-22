@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { routes } from "../const";
 import { Layout } from "../layouts/Layout";
 
 export const About: React.FC = () => {
