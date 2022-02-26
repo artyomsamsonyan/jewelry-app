@@ -92,45 +92,23 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
         </div>
 
         {/* for Mobile version */}
-        {/* <div className="block md:hidden">
-          {showModal ? (
-            location.pathname === routes.home ? (
-              <button onClick={handleShowModal}>
-                <CloseIconWhite />
-              </button>
-            ) : (
-              <button onClick={handleShowModal}>
-                <CloseIcon />
-              </button>
-            )
-          ) : location.pathname === routes.home ? (
-            <button onClick={handleShowModal}>
-              <MenuIconWhite />
-            </button>
-          ) : (
-            <button onClick={handleShowModal}>
-              <MenuIcon />
-            </button>
-          )}
-        </div> */}
-
-        <div className="block md:hidden relative w-6 h-6">
+        <div className="block md:hidden relative w-6 h-6 transition-all">
           {location.pathname === routes.home ? (
-            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+            <button className={`absolute top-0 left-0 transition-opacity duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
               <CloseIconWhite />
             </button>
           ) : (
-            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+            <button className={`absolute top-0 left-0 transition-opacity duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
               <CloseIcon />
             </button>
           )}
 
           {location.pathname === routes.home ? (
-            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+            <button className={`absolute top-0 left-0 transition-opacity duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
               <MenuIconWhite />
             </button>
           ) : (
-            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+            <button className={`absolute top-0 left-0 transition-opacity duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
               <MenuIcon />
             </button>
           )}
