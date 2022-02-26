@@ -26,7 +26,7 @@ export const AllModels: React.FC = () => {
     slidesToShow: 1,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     nextArrow: <ArrowRightIconBlack />,
     prevArrow: <ArrowLeftIconBlack />,
     pauseOnHover: false,

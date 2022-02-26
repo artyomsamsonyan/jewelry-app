@@ -22,10 +22,10 @@ export const Home: React.FC = () => {
         >
           <div className="max-w-7xl w-full pt-28 md:pt-44 px-8">
             <div className={`flex mb-8 ${animation ? "home" : "animation"}`}>
-              <span className="flex flex-col gap-3 text-4xl md:text-6xl text-white font-jost_semibold tracking-wide ">
-                <div>You can see my</div>  
-                <div>Works, by clicking</div>
-                <div>The button below</div>
+              <span className="flex flex-col gap-3 text-3xl md:text-6xl text-white font-jost_semibold tracking-wide ">
+                <div className="whitespace-nowrap">You can see my</div>  
+                <div className="whitespace-nowrap">Works, by clicking</div>
+                <div className="whitespace-nowrap">The button below</div>
               </span>
             </div>
             <div

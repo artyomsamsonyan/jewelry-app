@@ -51,7 +51,12 @@ export const allModels = [
     "/assets/models/matani_zmruxtnerov_1.jpg",
     "/assets/models/matani_zmruxtnerov_2.jpg",
   ],
-  
+  [
+    "/assets/models/Vardan_matani_uzor_1.jpg",
+    "/assets/models/Vardan_matani_uzor_2.jpg",
+    "/assets/models/Vardan_matani_uzor_3.jpg",
+    "/assets/models/Vardan_matani_uzor_4.jpg",
+  ],
 ];
 
 export const mainModels = [
@@ -98,5 +103,9 @@ export const mainModels = [
   {
     src: "/assets/models/matani_zmruxtnerov_1.jpg",
     number: 10,
+  },
+  {
+    src: "/assets/models/Vardan_matani_uzor_1.jpg",
+    number: 11,
   },
 ];

@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
           ) : (
             <DiamondIconBlack />
           )}
-          <span className="text-xl md:text-3xl font-jost_semibold tracking-widest">
+          <span className="text-xl md:text-3xl font-jost_semibold tracking-widest whitespace-nowrap">
             Sahakyan's Jewelry
           </span>
         </NavLink>
@@ -58,6 +58,9 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
               location.pathname === routes.home
                 ? "hover:border-b-2 hover:border-white"
                 : "border-b-2 border-white hover:border-black"
+            } ${
+              location.pathname === routes.allModels &&
+              "border-black border-b-2"
             } transition-colors`}
           >
             All Models
@@ -68,6 +71,8 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
               location.pathname === routes.home
                 ? "hover:border-b-2 hover:border-white"
                 : "border-b-2 border-white hover:border-black"
+            }  ${
+              location.pathname === routes.contact && "border-black border-b-2"
             } transition-colors`}
           >
             Contact
@@ -78,6 +83,8 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
               location.pathname === routes.home
                 ? "hover:border-b-2 hover:border-white"
                 : "border-b-2 border-white hover:border-black"
+            }  ${
+              location.pathname === routes.about && "border-black border-b-2"
             } transition-colors`}
           >
             About
@@ -85,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
         </div>
 
         {/* for Mobile version */}
-        <div className="block md:hidden">
+        {/* <div className="block md:hidden">
           {showModal ? (
             location.pathname === routes.home ? (
               <button onClick={handleShowModal}>
@@ -102,6 +109,28 @@ export const Header: React.FC<HeaderProps> = ({ blur, onBlur }) => {
             </button>
           ) : (
             <button onClick={handleShowModal}>
+              <MenuIcon />
+            </button>
+          )}
+        </div> */}
+
+        <div className="block md:hidden relative w-6 h-6">
+          {location.pathname === routes.home ? (
+            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+              <CloseIconWhite />
+            </button>
+          ) : (
+            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+              <CloseIcon />
+            </button>
+          )}
+
+          {location.pathname === routes.home ? (
+            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
+              <MenuIconWhite />
+            </button>
+          ) : (
+            <button className={`absolute top-0 left-0 transition-opacitu duration-500 ${!showModal ? "opacity-100" : "opacity-0" }`} onClick={handleShowModal}>
               <MenuIcon />
             </button>
           )}
