@@ -57,6 +57,10 @@ export const allModels = [
     "/assets/models/Xach_qarerov_1.jpg",
     "/assets/models/Xach_qarerov_2.jpg",
   ],
+  [
+    "/assets/models/Braslet_qarerov_1.jpg",
+    "/assets/models/Braslet_qarerov_2.jpg",
+  ],
 ];
 
 export const mainModels = [
@@ -107,5 +111,9 @@ export const mainModels = [
   {
     src: "/assets/models/Xach_qarerov_1.jpg",
     number: 11,
+  },
+  {
+    src: "/assets/models/Braslet_qarerov_1.jpg",
+    number: 12,
   },
 ];

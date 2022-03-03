@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
   }, []);
 
   return (
-    <Layout footer={false}>
+    <Layout>
       <div className="flex flex-col items-center w-full">
         <div
           className={`flex flex-col items-center pt-28 md:pt-32 px-5 md:px-8 max-w-7xl w-full ${
