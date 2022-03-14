@@ -61,6 +61,11 @@ export const allModels = [
     "/assets/models/Braslet_qarerov_1.jpg",
     "/assets/models/Braslet_qarerov_2.jpg",
   ],
+  [
+    "/assets/models/Cartier_braslet_1.jpg",
+    "/assets/models/Cartier_braslet_2.jpg",
+    "/assets/models/Cartier_braslet_3.jpg",
+  ],
 ];
 
 export const mainModels = [
@@ -115,5 +120,9 @@ export const mainModels = [
   {
     src: "/assets/models/Braslet_qarerov_1.jpg",
     number: 12,
+  },
+  {
+    src: "/assets/models/Cartier_braslet_1.jpg",
+    number: 13,
   },
 ];
