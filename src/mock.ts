@@ -66,6 +66,11 @@ export const allModels = [
     "/assets/models/Cartier_braslet_2.jpg",
     "/assets/models/Cartier_braslet_3.jpg",
   ],
+  [
+    "/assets/models/AK47_KAXICHOV_1.jpg",
+    "/assets/models/AK47_KAXICHOV_2.jpg",
+    "/assets/models/AK47_KAXICHOV_3.jpg",
+  ],
 ];
 
 export const mainModels = [
@@ -124,5 +129,9 @@ export const mainModels = [
   {
     src: "/assets/models/Cartier_braslet_1.jpg",
     number: 13,
+  },
+  {
+    src: "/assets/models/AK47_KAXICHOV_1.jpg",
+    number: 14,
   },
 ];
