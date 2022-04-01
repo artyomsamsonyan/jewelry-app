@@ -8,7 +8,7 @@ import {
   DiamondIconBlack,
   MenuIcon,
   MenuIconWhite,
-} from "../enviaroments/icons";
+} from "../envairoments/icons";
 
 interface HeaderProps {
   blur: boolean;

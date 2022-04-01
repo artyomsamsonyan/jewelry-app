@@ -22,7 +22,7 @@ export const About: React.FC = () => {
               <span className="border-b-2 border-black px-5 py-2 text-2xl md:text-3xl font-jost_medium md:pl-8">
                 About me
               </span>
-              <div className="w-full mt-10 text-xl font-jost_regular max-w-md w-full">
+              <div className="mt-10 text-xl font-jost_regular max-w-md w-full">
                 Hello!
                 <br /> <br />
                 My name is Vardan Sahakyan and I аm a Jewelry 3D designer from Armenia, Yerevan.

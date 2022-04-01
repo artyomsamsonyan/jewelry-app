@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { routes } from "../const";
-import { ArrowRightIconWhite } from "../enviaroments/icons";
+import { ArrowRightIconWhite } from "../envairoments/icons";
 import { Layout } from "../layouts/Layout";
 
 export const Home: React.FC = () => {
@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
   return (
     <Layout footer={false}>
         <div
-          className="flex justify-center w-full  min-h-screen bg-no-repeat bg-center z-10 bg-cover"
+          className="flex justify-center w-full min-h-screen bg-no-repeat bg-center bg-cover z-10"
           style={{ backgroundImage: "url(/assets/home_wallpaper5.jpg)" }}
         >
           <div className="max-w-7xl w-full pt-28 md:pt-44 px-8">

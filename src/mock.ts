@@ -71,6 +71,25 @@ export const allModels = [
     "/assets/models/AK47_KAXICHOV_2.jpg",
     "/assets/models/AK47_KAXICHOV_3.jpg",
   ],
+  [
+    "/assets/models/Tiffani_matani_1.jpg",
+    "/assets/models/Tiffani_matani_2.jpg",
+    "/assets/models/Tiffani_matani_3.jpg",
+  ],
+  [
+    "/assets/models/Matani_1.jpg",
+    "/assets/models/Matani_2.jpg",
+    "/assets/models/Matani_3.jpg",
+    "/assets/models/Matani_4.jpg",
+  ],
+  [
+    "/assets/models/Mataanii_1.jpg",
+    "/assets/models/Mataanii_2.jpg",
+    "/assets/models/Mataanii_3.jpg",
+    "/assets/models/Mataanii_4.jpg",
+    "/assets/models/Mataanii_5.jpg",
+    "/assets/models/Mataanii_6.jpg",
+  ],
 ];
 
 export const mainModels = [
@@ -135,3 +154,84 @@ export const mainModels = [
     number: 14,
   },
 ];
+
+export const Rings = [
+  {
+    src: "/assets/models/Matani_pechatka_1.jpg",
+    number: 0,
+  },
+  {
+    src: "/assets/models/matani_zmruxtnerov_1.jpg",
+    number: 1,
+  },
+  {
+    src: "/assets/models/Matani_cep_1.jpg",
+    number: 2,
+  },
+  {
+    src: "/assets/models/Vardan_matani_uzor_1.jpg",
+    number: 3,
+  },
+  {
+    src: "/assets/models/Vardan_matani_safire_1.jpg",
+    number: 4,
+  },
+  {
+    src: "/assets/models/Matani_punj_1.jpg",
+    number: 5,
+  },
+  {
+    src: "/assets/models/Vardan_matani_tiffany_1.jpg",
+    number: 6,
+  },
+  {
+    src: "/assets/models/R31L_1.jpg",
+    number: 7,
+  },
+  {
+    src: "/assets/models/Tiffani_matani_1.jpg",
+    number: 15,
+  },
+  {
+    src: "/assets/models/Matani_1.jpg",
+    number: 16,
+  },
+  {
+    src: "/assets/models/Mataanii_1.jpg",
+    number: 17,
+  }
+]
+
+export const Pendants = [
+  {
+    src: "/assets/models/Titer_qarerov_1.jpg",
+    number: 8,
+  },
+  {
+    src: "/assets/models/Kulon_Emerald_NEW_REND_1.jpg",
+    number: 9,
+  },
+  {
+    src: "/assets/models/Tiffanny_key_1.jpg",
+    number: 10,
+  },
+  {
+    src: "/assets/models/Xach_qarerov_1.jpg",
+    number: 11,
+  },
+  {
+    src: "/assets/models/AK47_KAXICHOV_1.jpg",
+    number: 14,
+  },
+]
+
+export const Bracelets = [
+  {
+    src: "/assets/models/Braslet_qarerov_1.jpg",
+    number: 12,
+  },
+  {
+    src: "/assets/models/Cartier_braslet_1.jpg",
+    number: 13,
+  },
+]

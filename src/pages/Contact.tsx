@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { EmailIcon, LocationIcon, PhoneIcon } from "../enviaroments/icons";
+import { EmailIcon, LocationIcon, PhoneIcon } from "../envairoments/icons";
 import { Layout } from "../layouts/Layout";
 
 export const Contact: React.FC = () => {

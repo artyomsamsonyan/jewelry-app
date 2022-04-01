@@ -11,7 +11,7 @@ export const Layout: React.FC<LayoutProps> = ({
 }) => {
   const [blur, setBlur] = useState<boolean>(false);
   return (
-    <div className="flex flex-col justify-between gap-16 min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen">
       {header && <Header blur={blur} onBlur={() => setBlur(!blur)} />}
       <div className={`${blur && "mobile_menu_bar"} transition-all`}>
       {children}
