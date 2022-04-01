@@ -7,7 +7,7 @@ import { allModels, Bracelets, Pendants, Rings } from "../mock";
 export const AllModels: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
   const [activeModel, setActiveModel] = useState<number>(0);
-  // const [activeTab, setActiveTab] = useState<typeof Rings | typeof Bracelets | typeof Pendants>(Rings);
+  const [activeTab, setActiveTab] = useState<typeof Rings | typeof Bracelets | typeof Pendants>(Rings);
 
   const handleSetActive = (n: number) => {
     setActiveModel(n);
@@ -66,60 +66,47 @@ export const AllModels: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col items-center bg-gray/30 w-full pb-16">
-          <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
-            <span className="border-b-2 border-black px-4 py-2">Rings</span>
+          <div className="flex w-full justify-center md:justify-start gap-2 px-5 md:gap-5 md:w-4/5 text-lg md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
+            <button
+              onClick={() => setActiveTab(Rings)}
+              className={`border-b-2 ${
+                activeTab === Rings
+                  ? "border-black"
+                  : "border-black/0 hover:opacity-70"
+              } transition-colors px-2 md:px-4 py-1 d:py-1.5`}
+            >
+              Rings
+            </button>
+            <button
+              onClick={() => setActiveTab(Pendants)}
+              className={`border-b-2 ${
+                activeTab === Pendants
+                  ? "border-black"
+                  : "border-black/0 hover:opacity-70"
+              } transition-colors px-2 md:px-4 py-1 md:py-1.5`}
+            >
+              Pendants
+            </button>
+            <button
+              onClick={() => setActiveTab(Bracelets)}
+              className={`border-b-2 ${
+                activeTab === Bracelets
+                  ? "border-black"
+                  : "border-black/0 hover:opacity-70"
+              } transition-colors px-2 md:px-4 py-1 md:py-1.5`}
+            >
+              Bracelets
+            </button>
           </div>
           <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
-            {Rings.map((model, i) => (
+            {activeTab.map((model, i) => (
               <div
                 key={`model-${i}`}
-                className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52 
-                 transition-opacity bg-white p-2 cursor-pointer
-                 ${
-                   model.number === activeModel
-                     ? "opacity-50"
-                     : "hover:opacity-80"
-                 }`}
-                onClick={() => handleSetActive(model.number)}
-              >
-                <img src={model.src} alt="model" className="object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium  mt-5 md:mt-10 mb-2">
-            <span className="border-b-2 border-black px-4 py-2">Pendants</span>
-          </div>
-          <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
-            {Pendants.map((model, i) => (
-              <div
-                key={`model-${i}`}
-                className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52 
-                 transition-opacity bg-white p-2 cursor-pointer
-                 ${
-                   model.number === activeModel
-                     ? "opacity-50"
-                     : "hover:opacity-80"
-                 }`}
-                onClick={() => handleSetActive(model.number)}
-              >
-                <img src={model.src} alt="model" className="object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium  mt-5 md:mt-10 mb-2">
-            <span className="border-b-2 border-black px-4 py-2">Bracelets</span>
-          </div>
-          <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
-            {Bracelets.map((model, i) => (
-              <div
-                key={`model-${i}`}
-                className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52 
-                 transition-opacity bg-white p-2 cursor-pointer
-                 ${
-                   model.number === activeModel
-                     ? "opacity-50"
-                     : "hover:opacity-80"
-                 }`}
+                className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
+              transition-opacity bg-white p-2 cursor-pointer
+              ${
+                model.number === activeModel ? "opacity-70" : "hover:opacity-80"
+              }`}
                 onClick={() => handleSetActive(model.number)}
               >
                 <img src={model.src} alt="model" className="object-cover" />
@@ -132,25 +119,63 @@ export const AllModels: React.FC = () => {
   );
 };
 
-// <div className="flex gap-5 md:w-4/5 text-xl md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
-//     <button onClick={() => setActiveTab(Rings)} className={`border-b-2 ${activeTab === Rings ? 'border-black' : 'border-black/0 hover:opacity-70'} transition-colors px-4 py-1.5`}>Rings</button>
-//     <button onClick={() => setActiveTab(Pendants)} className={`border-b-2 ${activeTab === Pendants ? 'border-black' : 'border-black/0 hover:opacity-70'} transition-colors px-4 py-1.5`}>Pendants</button>
-//     <button onClick={() => setActiveTab(Bracelets)} className={`border-b-2 ${activeTab === Bracelets ? 'border-black' : 'border-black/0 hover:opacity-70'} transition-colors px-4 py-1.5`}>Bracelets</button>
-//     </div>
-//       <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
-//         {activeTab.map((model, i) => (
-//           <div
-//             key={`model-${i}`}
-//             className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
-//               transition-opacity bg-white p-2 cursor-pointer
-//               ${
-//                 model.number === activeModel
-//                   ? "opacity-70"
-//                   : "hover:opacity-80"
-//               }`}
-//             onClick={() => handleSetActive(model.number)}
-//           >
-//             <img src={model.src} alt="model" className="object-cover" />
+//  <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
+//             <span className="border-b-2 border-black px-4 py-2">Rings</span>
 //           </div>
-//         ))}
-// </div>
+//           <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
+//             {Rings.map((model, i) => (
+//               <div
+//                 key={`model-${i}`}
+//                 className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
+//                  transition-opacity bg-white p-2 cursor-pointer
+//                  ${
+//                    model.number === activeModel
+//                      ? "opacity-50"
+//                      : "hover:opacity-80"
+//                  }`}
+//                 onClick={() => handleSetActive(model.number)}
+//               >
+//                 <img src={model.src} alt="model" className="object-cover" />
+//               </div>
+//             ))}
+//           </div>
+//           <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium  mt-5 md:mt-10 mb-2">
+//             <span className="border-b-2 border-black px-4 py-2">Pendants</span>
+//           </div>
+//           <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
+//             {Pendants.map((model, i) => (
+//               <div
+//                 key={`model-${i}`}
+//                 className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
+//                  transition-opacity bg-white p-2 cursor-pointer
+//                  ${
+//                    model.number === activeModel
+//                      ? "opacity-50"
+//                      : "hover:opacity-80"
+//                  }`}
+//                 onClick={() => handleSetActive(model.number)}
+//               >
+//                 <img src={model.src} alt="model" className="object-cover" />
+//               </div>
+//             ))}
+//           </div>
+//           <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium  mt-5 md:mt-10 mb-2">
+//             <span className="border-b-2 border-black px-4 py-2">Bracelets</span>
+//           </div>
+//           <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
+//             {Bracelets.map((model, i) => (
+//               <div
+//                 key={`model-${i}`}
+//                 className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
+//                  transition-opacity bg-white p-2 cursor-pointer
+//                  ${
+//                    model.number === activeModel
+//                      ? "opacity-50"
+//                      : "hover:opacity-80"
+//                  }`}
+//                 onClick={() => handleSetActive(model.number)}
+//               >
+//                 <img src={model.src} alt="model" className="object-cover" />
+//               </div>
+//             ))}
+//           </div>
