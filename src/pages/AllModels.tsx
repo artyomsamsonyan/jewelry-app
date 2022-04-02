@@ -7,9 +7,9 @@ import { allModels, Bracelets, Pendants, Rings } from "../mock";
 export const AllModels: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
   const [activeModel, setActiveModel] = useState<number>(0);
-  const [activeTab, setActiveTab] = useState<
-    typeof Rings | typeof Bracelets | typeof Pendants
-  >(Rings);
+  // const [activeTab, setActiveTab] = useState<
+  //   typeof Rings | typeof Bracelets | typeof Pendants
+  // >(Rings);
 
   const handleSetActive = (n: number) => {
     setActiveModel(n);
