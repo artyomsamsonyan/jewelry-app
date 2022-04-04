@@ -90,6 +90,10 @@ export const allModels = [
     "/assets/models/Mataanii_5.jpg",
     "/assets/models/Mataanii_6.jpg",
   ],
+  [
+    "/assets/models/Nkar_1.jpg",
+    "/assets/models/Nkar_2.jpg",
+  ]
 ];
 
 export const mainModels = [
@@ -199,7 +203,7 @@ export const Rings = [
   {
     src: "/assets/models/Mataanii_1.jpg",
     number: 17,
-  }
+  },
 ]
 
 export const Pendants = [
@@ -222,6 +226,10 @@ export const Pendants = [
   {
     src: "/assets/models/AK47_KAXICHOV_1.jpg",
     number: 14,
+  },
+  {
+    src: "/assets/models/Nkar_1.jpg",
+    number: 18,
   },
 ]
 
