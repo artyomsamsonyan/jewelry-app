@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { ArrowRightIconBlack, ArrowLeftIconBlack } from "../envairoments/icons";
 import { Layout } from "../layouts/Layout";
-import { allModels, Bracelets, Pendants, Rings } from "../mock";
+import { allModels, Bracelets, mainModels, Pendants, Rings } from "../mock";
 
 export const AllModels: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
@@ -68,7 +68,24 @@ export const AllModels: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col items-center bg-gray/30 w-full pb-16">
-          <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
+            <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
+            {mainModels.map((model, i) => (
+              <div
+                key={`model-${i}`}
+                className={`flex flex-col justify-center items-center w-24 h-24 md:w-52 md:h-52
+                 transition-opacity bg-white p-2 cursor-pointer
+                 ${
+                   model.number === activeModel
+                     ? "opacity-50"
+                     : "hover:opacity-80"
+                 }`}
+                onClick={() => handleSetActive(model.number)}
+              >
+                <img src={model.src} alt="model" className="object-cover" />
+              </div>
+            ))}
+          </div>
+          {/* <div className="md:w-4/5 text-xl md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
             <span className="border-b-2 border-black px-4 py-2">Rings</span>
           </div>
           <div className="flex flex-wrap justify-center md:justify-start max-w-7xl w-full gap-5 p-5">
@@ -127,7 +144,7 @@ export const AllModels: React.FC = () => {
                 <img src={model.src} alt="model" className="object-cover" />
               </div>
             ))}
-          </div>
+          </div> */}
           {/* <div className="flex w-full justify-center md:justify-start gap-2 px-5 md:gap-5 md:w-4/5 text-lg md:text-2xl font-jost_medium mt-5 md:mt-10 mb-2">
             <button
               onClick={() => setActiveTab(Rings)}

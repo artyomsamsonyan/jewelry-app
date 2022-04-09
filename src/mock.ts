@@ -157,6 +157,18 @@ export const mainModels = [
     src: "/assets/models/AK47_KAXICHOV_1.jpg",
     number: 14,
   },
+  {
+    src: "/assets/models/Tiffani_matani_1.jpg",
+    number: 15,
+  },
+  {
+    src: "/assets/models/Matani_1.jpg",
+    number: 16,
+  },
+  {
+    src: "/assets/models/Mataanii_1.jpg",
+    number: 17,
+  }
 ];
 
 export const Rings = [
