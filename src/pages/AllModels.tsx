@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { ArrowRightIconBlack, ArrowLeftIconBlack } from "../envairoments/icons";
 import { Layout } from "../layouts/Layout";
-import { allModels, Bracelets, mainModels, Pendants, Rings } from "../mock";
+import { allModels, mainModels } from "../mock";
 
 export const AllModels: React.FC = () => {
   const [animation, setAnimation] = useState<boolean>(false);
