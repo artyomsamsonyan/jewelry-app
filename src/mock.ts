@@ -168,7 +168,11 @@ export const mainModels = [
   {
     src: "/assets/models/Mataanii_1.jpg",
     number: 17,
-  }
+  },
+  {
+    src: "/assets/models/Nkar_1.jpg",
+    number: 18,
+  },
 ];
 
 export const Rings = [
